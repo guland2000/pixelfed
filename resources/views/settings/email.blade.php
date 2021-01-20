@@ -20,7 +20,7 @@
           @if(Auth::user()->email_verified_at)
           <span class="text-success">Verified</span> {{Auth::user()->email_verified_at->diffForHumans()}}
           @else
-          <span class="text-danger">Unverified</span> Вам необходимо <a href="/i/verify-email">подтвердить эл. почту</a>.
+          <span class="text-danger">Unverified</span> Вам необходимо <a href="/i/verify-email">подтвердить эл.почту</a>.
           @endif
         </p>
       </div>
