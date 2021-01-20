@@ -6,7 +6,7 @@
 	<h3 class="font-weight-bold">Отчёты</h3>
 </div>
 <hr>
-<p class="lead">Список ваших отчётов. </p>
+<p class="lead">Список ваших отчётов.</p>
 <table class="table table-responsive">
 	<thead class="bg-light">
 			<th scope="col">ID</th>
