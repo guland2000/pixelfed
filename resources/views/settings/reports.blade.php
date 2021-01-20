@@ -3,17 +3,17 @@
 @section('section')
 
 <div class="title">
-	<h3 class="font-weight-bold">Reports</h3>
+	<h3 class="font-weight-bold">Отчёты</h3>
 </div>
 <hr>
-<p class="lead">A list of reports you have made. </p>
+<p class="lead">Список ваших отчётов. </p>
 <table class="table table-responsive">
 	<thead class="bg-light">
 			<th scope="col">ID</th>
-			<th scope="col">Type</th>
-			<th scope="col">Reported</th>
-			<th scope="col">Status</th>
-			<th scope="col">Created</th>
+			<th scope="col">Тип</th>
+			<th scope="col">Сообщено</th>
+			<th scope="col">Состояние</th>
+			<th scope="col">Создано</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -23,9 +23,9 @@
 			<td class="font-weight-bold">{{$report->type}}</td>
 			<td class="font-weight-bold"><a href="{{$report->reported()->url()}}">{{str_limit($report->reported()->url(), 30)}}</a></td>
 			@if(!$report->admin_seen)
-			<td><span class="text-danger font-weight-bold">Unresolved</span></td>
+			<td><span class="text-danger font-weight-bold">Нерешённые</span></td>
 			@else
-			<td><span class="text-success font-weight-bold">Resolved</span></td>
+			<td><span class="text-success font-weight-bold">Решённые</span></td>
 			@endif
 			<td class="font-weight-bold">{{$report->created_at->diffForHumans(null, true, true)}}</td>
 		</tr>
